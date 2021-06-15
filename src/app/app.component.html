@@ -1,0 +1,9 @@
+
+<div class="container">
+    <div class="row">
+        <app-signup *ngIf="_template_service.flag_signup"></app-signup>
+        <app-login *ngIf="_template_service.flag_login"></app-login>
+        <app-worker *ngIf="_template_service.flag_worker"></app-worker>
+        <app-list *ngIf="_template_service.flag_worker"></app-list>
+    </div>
+</div>

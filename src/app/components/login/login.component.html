@@ -1,0 +1,17 @@
+<div class="wrapper fadeInDown">
+  
+    <div id="formContent">
+
+      <div class="fadeIn first">
+        <img src="https://apis.com.co/wp-content/uploads/2020/01/logo-carga-apis.png" id="icon" alt="User Icon" />
+      </div>
+      <form [formGroup]="form" (ngSubmit)='login()'>
+        <input formControlName="user" type="text" id="login" class="fadeIn second" name="login" placeholder="usuario">
+        <input formControlName="password" type="password" id="password" class="fadeIn third" name="password" placeholder="contraseña">
+        <input type="submit" class="fadeIn fourth" value="Entrar" [disabled]='this.form.invalid' [class.btn-disabled]='this.form.invalid'>
+        <div class="small fw-light" (click)="register()"><span>no tengo usuario y contraseña</span></div>
+        
+    </form>
+  
+    </div>
+  </div>

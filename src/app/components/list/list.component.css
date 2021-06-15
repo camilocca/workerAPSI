@@ -1,0 +1,21 @@
+.btn{
+    cursor: pointer;
+    font-size: x-large;
+    
+}
+.td-btn {
+    padding: 0;
+}
+.icon-big{
+    font-size: x-large;
+}
+
+.day_time {
+    background-color: rgb(231, 231, 231);
+    color: rgb(0, 0, 0);
+}
+
+.night{
+    background-color: rgb(37, 37, 53);
+    color: white;
+}

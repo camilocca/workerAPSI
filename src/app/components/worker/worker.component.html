@@ -1,0 +1,57 @@
+<div class="col-lg-8 offset-lg-2">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="titulo fw-bold">EMPLEADOS APSI</h3>
+        </div>
+    </div>
+</div>
+<div class="row mt-8 ">
+    <div class=" col-lg-8 offset-lg-2">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="titulo"> {{tittle_name | uppercase}} EMPLEADO</h4>
+                <form [formGroup]="form" (ngSubmit)='add_worker()'>
+                    <div class="input-group mb-3">
+                        <input formControlName="name" maxlength="15"  type="text" class="form-control"
+                            [class.goodcheck]="this.form.get('name')?.valid"
+                            [class.badcheck]="this.form.get('name')?.invalid && this.form.get('name')?.touched"
+                            placeholder="Nombre">
+                        <span class="input-group-text"></span>
+                        <input formControlName="lastName" maxlength="25"  type="text" class="form-control" 
+                            [class.goodcheck]="this.form.get('lastName')?.valid"
+                            [class.badcheck]="this.form.get('lastName')?.invalid && this.form.get('lastName')?.touched"
+                            placeholder="Apellido">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input formControlName="docId" maxlength="10" type="text" class="form-control" 
+                            [class.goodcheck]="this.form.get('docId')?.valid"
+                            [class.badcheck]="this.form.get('docId')?.invalid && this.form.get('docId')?.touched"
+                            placeholder="Documento de Identificación">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input formControlName="job" maxlength="30"  type="text" class="form-control"
+                            [class.goodcheck]="this.form.get('job')?.valid"
+                            [class.badcheck]="this.form.get('job')?.invalid && this.form.get('job')?.touched"
+                            placeholder="Cargo">
+                    </div>
+                <div class="d-grid gab-2">   
+                    <button [disabled]='this.form.invalid' [class.btn-disabled]='this.form.invalid' [class.btn-edit]="this.worker_id != null" class="btn btn-success btn-lg btn d-flex align-items-end justify-content-center" type="submit">
+                        <span class="material-icons-round align-self-center">
+                            storage
+                            </span>
+                        <span class='align-self-center'>
+                            &nbsp;
+                            {{button_name}}
+                        </span>
+                    </button>
+                </div> 
+                <div (click) = 'login_view()' class="btn d-flex align-items-end justify-content-end"><span class="material-icons-round">
+                    logout
+                    </span><span>Cerrar sesion</span></div>   
+            </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+

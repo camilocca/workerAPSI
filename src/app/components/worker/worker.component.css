@@ -1,0 +1,17 @@
+
+
+.goodcheck{
+    border-color: greenyellow
+}
+
+.badcheck{
+    border-color: red
+}
+
+.btn-disabled{
+    background-color: #AAAAAA;
+}
+
+.btn-edit{
+    background-color: #252eb1;
+}
